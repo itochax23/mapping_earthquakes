@@ -43,49 +43,7 @@ let map = L.map('mapid', {
 // Retrieve the earthquake GeoJSON data.
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data) {
   // Creating a GeoJSON layer with the retrieved data.
-  L.geoJson(data, {
-    // We turn each feature into a circleMarker on the map.
-    pointToLayer: function(feature, latlng) {
-        console.log(data);
-        return L.circleMarker(latlng);
-        },
-        // Set the style for each circleMarker
-        style: styleInfo
-        }).addTo(map);
-    // This function returns the style data for each of the earthquakes we plot on
-    // the map. We pass the magnitude of the earthquake into a function
-//     // to calculate the radius.
-// <<<<<<< HEAD
-//         function styleInfo(feature) {
-//   return {
-//     opacity: 1,
-//     fillOpacity: 1,
-//     fillColor: getColor(feature.properties.mag),
-//     color: "#000000",
-//     radius: getRadius(feature.properties.mag),
-//     stroke: true,
-//     weight: 0.5
-//   };
-// }
-// =======
-//     function styleInfo(feature) {
-//         return {
-//           opacity: 1,
-//           fillOpacity: 1,
-//           fillColor: getColor(feature.properties.mag),
-//           color: "#000000",
-//           radius: getRadius(feature.properties.mag),
-//           stroke: true,
-//           weight: 0.5
-//         };
-//       }
-// >>>>>>> 7767e295ee34cfa53bb91d1cb6cab05f8fefc947
-    function getRadius(magnitude) {
-    if (magnitude === 0) {
-      return 1;
-    }
-    return magnitude * 4;
-    };
+  L.geoJson(data).addTo(map);
 });
 
 // Pass our map layers into our layers control and add the layers control to the map.
