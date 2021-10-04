@@ -1,3 +1,4 @@
 
-Mapping_GeoJSON_Points/static/js/config.js
-.DS_Store
+Mapping_GeoJSON_Points/.DS_Store
+Mapping_GeoJSON_Linestrings/static/js/logic.js
+Mapping_GeoJSON_Linestrings/static/js/config.js
