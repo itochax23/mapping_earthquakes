@@ -4,3 +4,5 @@ Mapping_GeoJSON_Points/.DS_Store
 Mapping_GeoJSON_Linestrings/static/.DS_Store
 Mapping_GeoJSON_Linestrings/.DS_Store
 .DS_Store
+.vscode/settings.json
+Earthquakes_past7days/static/js/config.js
